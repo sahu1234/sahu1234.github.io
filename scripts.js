@@ -1,3 +1,12 @@
+// Initialize AOS
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+});
+
 // Interactive Navigation Menu
 document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll("nav ul li a");
@@ -16,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
             projectsContainer.innerHTML = '';
             data.forEach(project => {
                 const projectElement = document.createElement('div');
-                projectElement.classList.add('col-md-6', 'mb-4', 'project', project.category, 'animate__animated', 'animate__fadeIn');
+                projectElement.classList.add('col-md-6', 'mb-4', 'project', project.category);
+                projectElement.setAttribute('data-aos', 'fade-up');
                 projectElement.innerHTML = `
                     <div class="card">
                         <img src="${project.image}" class="card-img-top" alt="${project.title} Screenshot">
@@ -28,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 `;
                 projectsContainer.appendChild(projectElement);
             });
+            AOS.refresh();  // Refresh AOS after adding new elements
         })
         .catch(error => console.error('Error loading projects:', error));
 });
@@ -63,11 +74,3 @@ function validateForm() {
 
     return true;
 }
-
-// ScrollReveal Animations
-ScrollReveal().reveal('.animate__animated', {
-    delay: 200,
-    duration: 800,
-    easing: 'ease-in-out',
-    reset: true
-});
