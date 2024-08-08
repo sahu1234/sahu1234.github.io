@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Project One",
+        "description": "Description of project one. Include details about the project, technologies used, and outcomes.",
+        "image": "project1.jpg",
+        "category": "data-science"
+    },
+    {
+        "title": "Project Two",
+        "description": "Description of project two. Include details about the project, technologies used, and outcomes.",
+        "image": "project2.jpg",
+        "category": "web-development"
+    }
+]

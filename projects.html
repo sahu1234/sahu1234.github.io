@@ -6,41 +6,31 @@
     <title>Projects</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header class="bg-dark text-white text-center py-4">
-        <h1>My Portfolio</h1>
+        <h1 class="animate__animated animate__fadeInDown">My Portfolio</h1>
         <nav>
             <ul class="nav justify-content-center">
                 <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link text-white active" href="projects.html">Projects</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main class="container my-5">
         <section>
-            <h2>Projects</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src="project1.jpg" class="card-img-top" alt="Project One Screenshot">
-                        <div class="card-body">
-                            <h5 class="card-title">Project One</h5>
-                            <p class="card-text">Description of project one. Include details about the project, technologies used, and outcomes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src="project2.jpg" class="card-img-top" alt="Project Two Screenshot">
-                        <div class="card-body">
-                            <h5 class="card-title">Project Two</h5>
-                            <p class="card-text">Description of project two. Include details about the project, technologies used, and outcomes.</p>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="animate__animated animate__fadeInUp">Projects</h2>
+            <div class="btn-group" role="group" aria-label="Project filter">
+                <button type="button" class="btn btn-secondary" onclick="filterProjects('all')">All</button>
+                <button type="button" class="btn btn-secondary" onclick="filterProjects('data-science')">Data Science</button>
+                <button type="button" class="btn btn-secondary" onclick="filterProjects('web-development')">Web Development</button>
+            </div>
+            <div class="row mt-4" id="projects-container">
+                <!-- Projects will be loaded here dynamically -->
             </div>
         </section>
     </main>

@@ -7,6 +7,29 @@ document.addEventListener("DOMContentLoaded", function() {
             event.target.classList.add("active");
         });
     });
+
+    // Load projects dynamically
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(data => {
+            const projectsContainer = document.getElementById('projects-container');
+            projectsContainer.innerHTML = '';
+            data.forEach(project => {
+                const projectElement = document.createElement('div');
+                projectElement.classList.add('col-md-6', 'mb-4', 'project', project.category, 'animate__animated', 'animate__fadeIn');
+                projectElement.innerHTML = `
+                    <div class="card">
+                        <img src="${project.image}" class="card-img-top" alt="${project.title} Screenshot">
+                        <div class="card-body">
+                            <h5 class="card-title">${project.title}</h5>
+                            <p class="card-text">${project.description}</p>
+                        </div>
+                    </div>
+                `;
+                projectsContainer.appendChild(projectElement);
+            });
+        })
+        .catch(error => console.error('Error loading projects:', error));
 });
 
 // Project Filtering
@@ -40,3 +63,11 @@ function validateForm() {
 
     return true;
 }
+
+// ScrollReveal Animations
+ScrollReveal().reveal('.animate__animated', {
+    delay: 200,
+    duration: 800,
+    easing: 'ease-in-out',
+    reset: true
+});
