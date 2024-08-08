@@ -28,6 +28,11 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: #ddd;
+    transition: color 0.3s;
+}
+
 main {
     padding: 2rem;
     max-width: 800px;
@@ -43,10 +48,7 @@ main {
     gap: 2rem;
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+.card {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
