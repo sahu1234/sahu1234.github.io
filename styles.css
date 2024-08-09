@@ -1,11 +1,46 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f5f5f5;
+/* Root Variables for Color Scheme */
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --accent-color: #e74c3c; /* Red */
+    --background-color: #f5f5f5; /* Light Grey */
+    --text-color: #333333; /* Dark Grey */
+    --white-color: #ffffff; /* White */
 }
 
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper for Flexbox Layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Header and Navigation */
 header {
     background: #333;
     color: white;
@@ -33,33 +68,14 @@ nav ul li a:hover {
     transition: color 0.3s;
 }
 
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.card {
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
+/* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
+    margin-top: auto;
     width: 100%;
-    bottom: 0;
 }
 
 footer a {
@@ -72,9 +88,21 @@ footer a:hover {
     color: #ddd;
 }
 
+/* Projects */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 h1, h2, h3 {
     font-family: 'Georgia', serif;
 }
+
 /* Animista CSS */
 .animista {
     -webkit-animation-duration: 1s;
