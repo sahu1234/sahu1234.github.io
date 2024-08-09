@@ -171,6 +171,22 @@ input:focus, textarea:focus {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
 
 /* Footer */
 footer {
@@ -192,18 +208,3 @@ footer a:hover {
     color: var(--accent-color);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-content {
-        flex-direction: column;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
