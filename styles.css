@@ -194,19 +194,3 @@ footer a {
 footer a:hover {
     color: var(--accent-color);
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-content {
-        flex-direction: column;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
