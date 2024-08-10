@@ -20,14 +20,31 @@
         </nav>
     </header>
     <main class="container my-5">
-        <section>
-            <h2>Contact Me</h2>
-            <p class="lead">If you would like to get in touch, please reach out via email or connect with me on LinkedIn.</p>
-            <ul class="list-unstyled">
-                <li>Email: <a href="mailto:bajajsahil336@gamil.com">bajajsahil336@gamil.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/sahiljayabajaj/">sahiljayabajaj</a></li>
-            </ul>
-        </section>
+        <section id="contact" class="text-center py-5">
+            <h2>Get in Touch</h2>
+    <p>If you're interested in collaborating or have any questions, feel free to reach out!</p>
+    <form action="submit_form.php" method="post" class="mt-4">
+        <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+    </form>
+    <p class="mt-4">Or connect with me on:</p>
+    <p>
+        <a href="https://www.linkedin.com/in/sahiljayabajaj/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/sahu1234" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.kaggle.com/" target="_blank"><i class="fab fa-kaggle"></i></a>
+        <a href="https://public.tableau.com/app/profile/sahil.bajaj5153/vizzes"target="_blank">
+            <img src="tableau-svgrepo-com.svg" alt="Tableau" style="width: 24px; height: 24px;">
+        </a>
+    </p>
+</section>
     </main>
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 My Portfolio</p>
